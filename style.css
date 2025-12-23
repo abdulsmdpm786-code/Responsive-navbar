@@ -1,0 +1,62 @@
+.html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-bar {
+    width: 100%;
+    height: auto;
+    background-color:#754A00;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    position: relative;
+}
+
+.nav-bar a {
+    color: white;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#icon {
+    display: none;
+    position: absolute;
+    right: 60px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .nav-bar {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+
+     
+    }
+
+    .nav-bar a {
+        display: none;
+    }
+
+
+    #icon {
+        display: block;
+        color: white;
+    }
+
+
+    .nav-bar.active a {
+        display: block;
+    }
+}
+
+

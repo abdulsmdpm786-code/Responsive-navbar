@@ -8,8 +8,9 @@ body {
 .nav-bar {
     width: 100%;
     height: auto;
-    background-color:#754A00;
-    padding: 20px;
+    background-color: #754A00;
+        padding:  20px;
+
 
     display: flex;
     align-items: center;
@@ -28,7 +29,7 @@ body {
 #icon {
     display: none;
     position: absolute;
-    right: 60px;
+    right: 80px;
 }
 
 
@@ -36,15 +37,28 @@ body {
 @media screen and (max-width: 600px) {
 
     .nav-bar {
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
 
-     
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        padding: 10px 20px;
+
+
+
     }
 
     .nav-bar a {
-        display: none;
+        display: block;
+        max-height: 0;
+        
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-10px);
+        transition: all 0.5s ease;
+        margin-left: 0;
+        padding: 10px 0;
+       
     }
 
 
@@ -55,8 +69,14 @@ body {
 
 
     .nav-bar.active a {
-        display: block;
+        max-height: 50px;
+        opacity: 1;
+        transform: translateY(0);
+
+
     }
+
+    #icon {
+        top: 30px;
 }
-
-
+}
